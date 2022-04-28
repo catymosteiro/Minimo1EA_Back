@@ -8,6 +8,7 @@ import cors from 'cors';
 import indexRoutes from './routes/indexRoutes';
 import postsRoutes from './routes/usersRoutes';
 import librosRoutes from './routes/LibrosRoutes';
+import valoracionesRoutes from './routes/ValoracionesRoutes';
 
 
 class Server {
@@ -42,6 +43,7 @@ class Server {
         this.app.use(indexRoutes);
         this.app.use('/api/users', postsRoutes);
         this.app.use('/api/libros', librosRoutes);
+        this.app.use('/api/valoraciones', valoracionesRoutes);
     }
 
     start() {
